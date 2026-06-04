@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Dr. Susheela Sharma Stern</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #contact-page { background: var(--ink); flex: 1; }
+    #contact-page .section-label { color: var(--accent-light); }
+    #contact-page h2 { color: var(--cream); }
+    #contact-page h2 em { color: var(--accent-light); }
+
+    /* Override page header for dark theme on this page */
+    body { background: var(--ink); }
+    nav {
+      background: rgba(26, 22, 18, 0.95);
+      border-bottom-color: rgba(255,255,255,0.1);
+    }
+    .nav-name { color: rgba(248,244,237,0.5); }
+    .nav-links a { color: rgba(248,244,237,0.45); }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent-light); }
+
+    .page-header {
+      background: #221c17;
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+
+    .page-header::before {
+      background: repeating-linear-gradient(
+        45deg,
+        transparent, transparent 18px,
+        rgba(196,133,106,0.05) 18px,
+        rgba(196,133,106,0.05) 19px
+      );
+    }
+
+    .page-eyebrow { color: var(--accent-light); }
+    .page-title { color: var(--cream); }
+    .page-title em { color: var(--accent-light); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-intro {
+      font-size: 1.05rem;
+      color: rgba(248,244,237,0.55);
+      line-height: 1.85;
+    }
+
+    .contact-links { display: flex; flex-direction: column; gap: 0.8rem; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent-light);
+      background: rgba(196,133,106,0.08);
+    }
+
+    .link-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      min-width: 90px;
+    }
+
+    .link-value {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      color: rgba(248,244,237,0.75);
+    }
+
+    .section-rule { background: rgba(255,255,255,0.1); }
+
+    /* Office hours box */
+    .office-box {
+      margin-top: 3.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem;
+    }
+
+    .office-box h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    .office-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .office-row:last-child { border-bottom: none; }
+
+    .office-day {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--accent-light);
+      text-transform: uppercase;
+    }
+
+    .office-time {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      color: rgba(248,244,237,0.6);
+    }
+
+    @media (max-width: 800px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-name">Dr. Sharma Stern</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="awards.html">Awards</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Get in Touch</p>
+      <h1 class="page-title">Contact &amp; <em>Connect</em></h1>
+    </div>
+  </div>
+
+  <section id="contact-page">
+    <div class="section-inner">
+
+      <div class="contact-grid">
+        <div>
+          <p class="contact-intro reveal">
+            I welcome enquiries from students, collaborators, journalists, 
+            and institutions. Whether you are interested in my research, 
+            exploring a collaboration, or attending a talk — please reach out.
+          </p>
+
+          <div class="office-box reveal">
+            <h3>Office Hours</h3>
+            <div class="office-row">
+              <span class="office-day">Monday</span>
+              <span class="office-time">10:00 – 12:00</span>
+            </div>
+            <div class="office-row">
+              <span class="office-day">Wednesday</span>
+              <span class="office-time">14:00 – 16:00</span>
+            </div>
+            <div class="office-row">
+              <span class="office-day">By Appointment</span>
+              <span class="office-time">Email to schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:your.email@university.edu" class="contact-link reveal">
+            <span class="link-label">Email</span>
+            <span class="link-value">your.email@university.edu</span>
+          </a>
+          <a href="#" class="contact-link reveal">
+            <span class="link-label">Institution</span>
+            <span class="link-value">Your University / Department</span>
+          </a>
+          <a href="#" class="contact-link reveal">
+            <span class="link-label">Office</span>
+            <span class="link-value">Room XX, Building Name</span>
+          </a>
+          <a href="#" class="contact-link reveal">
+            <span class="link-label">Google Scholar</span>
+            <span class="link-value">View Publications →</span>
+          </a>
+          <a href="#" class="contact-link reveal">
+            <span class="link-label">ORCID</span>
+            <span class="link-value">0000-0000-0000-0000</span>
+          </a>
+          <a href="#" class="contact-link reveal">
+            <span class="link-label">LinkedIn</span>
+            <span class="link-value">linkedin.com/in/yourprofile</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <a href="index.html" class="footer-name">Dr. Susheela Sharma Stern</a>
+    <span class="footer-copy">&copy; 2026 — All Rights Reserved</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
